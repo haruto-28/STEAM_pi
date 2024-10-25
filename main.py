@@ -1,6 +1,7 @@
 
 import speech_recognition as sr
 import pyttsx3 
+from enum import Enum
  
 # Initialize the recognizer 
 r = sr.Recognizer() 
