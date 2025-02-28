@@ -4,7 +4,7 @@ import os
 
 def save_frame_camera_key(device_num, dir_path, basename, ext='jpg', delay=1, window_name='frame'):
     cap = cv2.VideoCapture(device_num)
-
+    
     if not cap.isOpened():
         return
 
@@ -25,4 +25,3 @@ def save_frame_camera_key(device_num, dir_path, basename, ext='jpg', delay=1, wi
     cv2.destroyWindow(window_name)
 
 
-save_frame_camera_key(0, 'data/temp', 'camera_capture')
