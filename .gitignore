@@ -7,6 +7,6 @@ security]/
 __pycache__/
 *.pyc
 *.cfg
-Include\
-Lib\
-Scripts\
+Include/
+Lib/
+Scripts/
