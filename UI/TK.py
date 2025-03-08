@@ -39,6 +39,7 @@ class NumericInputApp:
             self.root.quit()  # プログラムを終了させる
         else:
             messagebox.showerror("Result", "Incorrect input")
+            self.input_value.set("")  # 入力フィールドをクリアする
 
 # メインウィンドウの作成
 root = tk.Tk()
