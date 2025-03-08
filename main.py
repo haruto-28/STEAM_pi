@@ -1,6 +1,6 @@
 from datetime import datetime
-from notify import send_mail
-import picture
+from Utils.notify import send_mail
+import Utils.picture
 
 with open("pass.txt", "r") as file:
     password = file.read()
