@@ -22,11 +22,11 @@ class NumericInputApp:
         for i in range(10):
             button = tk.Button(button_frame, text=str(i), font=("Helvetica", 18), width=4, height=2, 
                                command=lambda num=i: self.append_number(num))
-            button.grid(row=i//3, column=i%3, padx=5, pady=5)
+            button.grid(row=i//5, column=i%5, padx=5, pady=5)
 
         # チェックボタンの作成
         check_button = tk.Button(root, text="Check", command=self.check_input, font=("Helvetica", 18))
-        check_button.pack(pady=20)
+        check_button.pack(pady=1)
 
     def append_number(self, num):
         current_value = self.input_value.get()
