@@ -31,7 +31,7 @@ cap.release()
 time.sleep(1)
 
 # カスケード分類器を手動で読み込む
-face_cascade = cv2.CascadeClassifier('/home/kali/STEAM_pi/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('../opencv-data/haarcascade_frontalface_default.xml')
 
 # Haarカスケード分類器が正しく読み込まれたかチェック
 if face_cascade.empty():
