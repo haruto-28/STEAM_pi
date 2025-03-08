@@ -6,7 +6,7 @@ data/
 security]/
 __pycache__/
 *.pyc
-pyenv.cfg
+*.cfg
 Include/
 Lib/
 Scripts/
