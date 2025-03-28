@@ -8,3 +8,4 @@ lib/
 venv/
 *.cfg
 *.txt
+*.DS_Store
