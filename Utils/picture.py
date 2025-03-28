@@ -2,7 +2,7 @@ import cv2
 import os
 
 
-def save_frame_camera_key(device_num, dir_path, basename, ext='jpg', delay=1, window_name='frame'):
+def save_frame_camera_key(device_num, dir_path, basename, ext='jpg', delay=1)-> str:
     cap = cv2.VideoCapture(device_num)
     
     if not cap.isOpened():
@@ -10,18 +10,11 @@ def save_frame_camera_key(device_num, dir_path, basename, ext='jpg', delay=1, wi
 
     os.makedirs(dir_path, exist_ok=True)
     base_path = os.path.join(dir_path, basename)
+    ret, frame = cap.read()
 
-    n = 0
-    while True:
-        ret, frame = cap.read()
-        cv2.imshow(window_name, frame)
-        key = cv2.waitKey(delay) & 0xFF
-        if key == ord('c'):
-            cv2.imwrite('{}_{}.{}'.format(base_path, n, ext), frame)
-            n += 1
-        elif key == ord('q'):
-            break
-
-    cv2.destroyWindow(window_name)
-
-
+    try:
+        cv2.imwrite('{}.{}'.format(base_path, ext), frame)
+        return '{}.{}'.format(base_path, ext)
+    except Exception as e:
+        print("failed to write image Error:{}".format(e))
+        return "fail"

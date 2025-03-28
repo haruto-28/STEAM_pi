@@ -62,8 +62,3 @@ class setting_file:
         return"pin1:{}\npin2:{}\nemail:{}".format(self.pin1,self.pin2,self.mail_adress)
 
 
-setting_file = setting_file(file="setting.secset")
-print(setting_file)
-#setting_file.write_file()
-setting_file.read_file()
-print(setting_file)
